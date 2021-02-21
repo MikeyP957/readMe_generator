@@ -3,8 +3,13 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = [ //questions include description, installation instructions, usage information, contributing guidelines, testing guidelines, email, github username, and 3 license choices
+const questions = () =>  //questions include description, installation instructions, usage information, contributing guidelines, testing guidelines, email, github username, and 3 license choices
     inquirer.prompt([
+        {
+            type: 'input',
+            name:'projectName',
+            message: 'What is the name of your project?.'
+        },
         {
             type: 'input',
             name:'description',
@@ -46,38 +51,47 @@ const questions = [ //questions include description, installation instructions, 
             name: 'email',
             message: 'What is your contact email?'
         }
-    ])
-];
+    ]);
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
     console.log(
-        `#${fileName}\n 
-        ## Description\n ${data.description}\n
-        ## Table of contents: \n
-        1. [Installation](#Installation)\n
-        1. [Usage](#Usage-Instructions)\n
-        1. [License](#License)\n
-        1. [Contributing](#Contributing-Guidelines)\n
-        1. [Testing](#Testing)\n
-        1. [Questions](#Questions)\n
-        ## Installation:\n
-        ${data.installation}\n
-        ## Usage Instructions:\n
-        ${data.usage}\n
-        ## Contributing Guidelines:\n
-        ${data.contributing}\n
-        ## Testing:\n
-        ${data.test}\n
-        ## Questions:\n
-        Contact me with any further questions via email:${data.email}\nOr my github: ${data.github}\n` 
+        `#${data.projectName} 
+        ## Description ${data.description}
+        ## Table of contents: 
+        1. [Installation](#Installation)
+        1. [Usage](#Usage-Instructions)
+        1. [License](#License)
+        1. [Contributing](#Contributing-Guidelines)
+        1. [Testing](#Testing)
+        1. [Questions](#Questions)
+        ## Installation:
+        ${data.installation}
+        ## Usage Instructions:
+        ${data.usage}
+        ## Contributing Guidelines:
+        ${data.contributing}
+        ## Testing:
+        ${data.test}
+        ## Questions:
+        Contact me with any further questions via email:${data.email}Or my github: ${data.github}` 
     );
-    console.log('\n-------------\n')
-}
+    }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    questions().then((data) => {
+        try{
+            const markDown = writeToFile(data);
+            fs.writeFileSync('README.md', markDown);
+            console.log('Success!'); 
+        }
+        catch (error){
+            console.log(error);
+        }
+    })
+}
 
 // Function call to initialize app
 init();
