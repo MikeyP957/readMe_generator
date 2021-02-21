@@ -54,10 +54,10 @@ const questions = () =>  //questions include description, installation instructi
     ]);
 
 
-// TODO: Create a function to write README file
-function writeToFile(data) {
-    console.log(
-        `#${data.projectName} 
+// A function to write README file
+const writeToFile = (data) => 
+    
+        `# ${data.projectName} 
         ## Description ${data.description}
         ## Table of contents: 
         1. [Installation](#Installation)
@@ -75,11 +75,10 @@ function writeToFile(data) {
         ## Testing:
         ${data.test}
         ## Questions:
-        Contact me with any further questions via email:${data.email}Or my github: ${data.github}` 
-    );
-    }
+        Contact me with any further questions via email:${data.email}Or my github: ${data.github}`;
+    
 
-// TODO: Create a function to initialize app
+// A function to initialize app
 function init() {
     questions().then((data) => {
         try{
