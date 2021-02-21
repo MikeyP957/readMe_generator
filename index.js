@@ -51,7 +51,30 @@ const questions = [ //questions include description, installation instructions, 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    console.log(
+        `#${fileName}\n 
+        ## Description\n ${data.description}\n
+        ## Table of contents: \n
+        1. [Installation](#Installation)\n
+        1. [Usage](#Usage-Instructions)\n
+        1. [License](#License)\n
+        1. [Contributing](#Contributing-Guidelines)\n
+        1. [Testing](#Testing)\n
+        1. [Questions](#Questions)\n
+        ## Installation:\n
+        ${data.installation}\n
+        ## Usage Instructions:\n
+        ${data.usage}\n
+        ## Contributing Guidelines:\n
+        ${data.contributing}\n
+        ## Testing:\n
+        ${data.test}\n
+        ## Questions:\n
+        Contact me with any further questions via email:${data.email}\nOr my github: ${data.github}\n` 
+    );
+    console.log('\n-------------\n')
+}
 
 // TODO: Create a function to initialize app
 function init() {}
