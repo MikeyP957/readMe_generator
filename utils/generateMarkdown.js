@@ -23,7 +23,7 @@ function renderLicenseBadge(license) {
 // A function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(license !== null){
+  if(license != null){
     switch(license){
       case 'Apache License v2.0':
         license ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#apache-20-license';
@@ -45,8 +45,8 @@ function renderLicenseLink(license) {
 // A function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(license !==null){
-    `${license} ${renderLicenseBadge(license)}
+  if(license != null){
+    return `${license} ${renderLicenseBadge(license)}
     [link](${renderLicenseLink(license)})`
   }
   else return '';
@@ -80,7 +80,8 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Questions:
-  Contact me with any further questions via email:${data.email}Or my github: ${data.github}`;
+  Contact me with any further questions via email:${data.email}
+  Or my github: ${data.github}`;
 }
 
 module.exports = generateMarkdown;
