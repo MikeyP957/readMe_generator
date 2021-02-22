@@ -57,25 +57,6 @@ const questions = () =>  //questions include description, installation instructi
 // A function to write README file
 const writeToFile = (data) => 
     
-        `# ${data.projectName} 
-        ## Description ${data.description}
-        ## Table of contents: 
-        1. [Installation](#Installation)
-        1. [Usage](#Usage-Instructions)
-        1. [License](#License)
-        1. [Contributing](#Contributing-Guidelines)
-        1. [Testing](#Testing)
-        1. [Questions](#Questions)
-        ## Installation:
-        ${data.installation}
-        ## Usage Instructions:
-        ${data.usage}
-        ## Contributing Guidelines:
-        ${data.contributing}
-        ## Testing:
-        ${data.test}
-        ## Questions:
-        Contact me with any further questions via email:${data.email}Or my github: ${data.github}`;
     
 
 // A function to initialize app
