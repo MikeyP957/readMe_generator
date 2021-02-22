@@ -1,5 +1,5 @@
-# readme man 
-  ## Description it writes a readme
+# generate a readme 
+  ## Description it generates a readme
   ## Table of contents: 
   1. [Installation](#Installation)
   1. [Usage](#Usage-Instructions)
@@ -9,21 +9,21 @@
   1. [Questions](#Questions)
 
   ## Installation:  
-  install it 
+  none
 
   ## Usage Instructions:
-  use it all day
+  eat
 
-  ## License:GNU General Public License v3.0
-  GNU General Public License v3.0 GNU General Public License v3.0
-    [link](GNU General Public License v3.0)
+  ## License:Mozilla Public License 2.0
+  Mozilla Public License 2.0 undefined
+    [Mozilla Public License 2.0 link](undefined)
 
   ## Contributing Guidelines:
-  IDK
+  sleep
 
   ## Testing:
-  no
+  drink
 
   ## Questions:
-  Contact me with any further questions via email:oeram
-  Or my github: MikeyPo
+  Contact me with any further questions via email:mieprt
+  Or my github: mikeyo

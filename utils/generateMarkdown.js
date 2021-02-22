@@ -15,7 +15,6 @@ function renderLicenseBadge(license) {
         license ='[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
         break;
     }
-    return license;
   }
   else return '';
 }
@@ -27,6 +26,7 @@ function renderLicenseLink(license) {
     switch(license){
       case 'Apache License v2.0':
         license ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#apache-20-license';
+        break;
       case 'GNU General Public License v3.0':
         license ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#gnu-gpl-v3';
         break;
@@ -37,7 +37,7 @@ function renderLicenseLink(license) {
         license ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#mozilla-public-license-20';
         break;
     }
-    return license;
+    
   }
   else return '';
 }
@@ -47,7 +47,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if(license != null){
     return `${license} ${renderLicenseBadge(license)}
-    [link](${renderLicenseLink(license)})`
+    [${license} link](${renderLicenseLink(license)})`
   }
   else return '';
 }
