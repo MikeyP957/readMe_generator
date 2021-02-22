@@ -39,7 +39,7 @@ const questions = () =>  //questions include description, installation instructi
             type: 'checkbox',
             name:'license',
             message: 'Choose a license for this application.',
-            choices:['Apache License v2.0', 'GNU General Public License v3.0', 'MIT License'],
+            choices:['Apache License v2.0', 'GNU General Public License v3.0', 'MIT License', "Mozilla Public License 2.0"],
         },
         {
             type: 'input',
