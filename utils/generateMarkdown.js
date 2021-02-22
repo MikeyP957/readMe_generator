@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
       case 'MIT License':
         badge ='[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
         break;
-      case "Mozilla Public License 2.0":
+      case 'Mozilla Public License 2.0':
         badge ='[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
         break;
     }
@@ -24,7 +24,20 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license !== null){
-
+    switch(license){
+      case 'Apache License v2.0':
+        link ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#apache-20-license';
+      case 'GNU General Public License v3.0':
+        link ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#gnu-gpl-v3';
+        break;
+      case 'MIT License':
+        link ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#the-mit-license';
+        break;
+      case 'Mozilla Public License 2.0':
+        link ='https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#mozilla-public-license-20';
+        break;
+    }
+    return link;
   }
   else return '';
 }
