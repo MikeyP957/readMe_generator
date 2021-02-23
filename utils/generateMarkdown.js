@@ -85,8 +85,10 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Questions:
-  Contact me with any further questions via email: ${data.email}
-  Or my github: ${data.github}`;
+  Contact me with any further questions via email:
+  ${data.email}
+  Or my github:
+  [github.com/${data.github}]`;
 }
 
 module.exports = generateMarkdown;
