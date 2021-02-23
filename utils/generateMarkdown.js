@@ -88,7 +88,7 @@ function generateMarkdown(data) {
   Contact me with any further questions via email:
   ${data.email}
   Or my github:
-  [github.com/${data.github}]`;
+  github.com/${data.github}`;
 }
 
 module.exports = generateMarkdown;
