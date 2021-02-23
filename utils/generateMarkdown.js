@@ -56,6 +56,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if(typeof license[0] !== 'undefined'){
     return `## License:${license}
+    
     The license for this project is the ${license} license.
     To read more about this license follow the link below.
     [${license} link](${renderLicenseLink(license)})
