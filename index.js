@@ -4,7 +4,6 @@ const fs = require('fs');
 
 //function that creates markdown from generateMarkdown file
 const createMd = require('./utils/generateMarkdown')
-console.log(createMd);
 
 // An array of questions for user input
 const questions = () =>  //questions include description, installation instructions, usage information, contributing guidelines, testing guidelines, email, github username, and 3 license choices

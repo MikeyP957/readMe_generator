@@ -1,7 +1,7 @@
 // A function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if(license !== null){
+  if(typeof license[0] !== 'undefined'){
     badge = license[0]
     switch(badge){
       case 'Apache License v2.0':
@@ -20,11 +20,18 @@ function renderLicenseBadge(license) {
   }
   else return '';
 }
-
+//table of contents link for license, if no license return empty string
+function tableContentsLicense(license){
+  if(typeof license[0] !== 'undefined'){
+    return`
+    1. [License](#License)`    
+  }
+  else return '';
+}
 // A function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(license != null){
+  if(typeof license[0] !== 'undefined'){
     link = license[0]
     switch(link){
       case 'Apache License v2.0':
@@ -48,11 +55,16 @@ function renderLicenseLink(license) {
 // A function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if(license != null){
-    return `The license for this project is the ${license} license.
+  if(typeof license[0] !== 'undefined'){
+    return `
+
+    ### License:${license}
+    The license for this project is the ${license} license.
     To read more about this license follow the link below.
-    [${license} link](${renderLicenseLink(license)})`
-      }
+    [${license} link](${renderLicenseLink(license)})
+
+    `
+    }
   else return '';
 }
 
@@ -63,8 +75,7 @@ function generateMarkdown(data) {
   ${data.description}
   ## Table of contents: 
   1. [Installation](#Installation)
-  1. [Usage](#Usage-Instructions)
-  1. [License](#License)
+  1. [Usage](#Usage-Instructions)${tableContentsLicense(data.license)}
   1. [Contributing](#Contributing-Guidelines)
   1. [Testing](#Testing)
   1. [Questions](#Questions)
@@ -73,11 +84,8 @@ function generateMarkdown(data) {
   ${data.installation}
 
   ## Usage Instructions:
-  ${data.usage}
-
-  ## License:${data.license}
+  ${data.usage}  
   ${renderLicenseSection(data.license)}
-
   ## Contributing Guidelines:
   ${data.contributing}
 
@@ -87,7 +95,7 @@ function generateMarkdown(data) {
   ## Questions:
   Contact me with any further questions via email:
   ${data.email}
-  
+
   Or my github:
   https://github.com/${data.github}`;
 }
