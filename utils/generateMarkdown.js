@@ -23,8 +23,7 @@ function renderLicenseBadge(license) {
 //table of contents link for license, if no license return empty string
 function tableContentsLicense(license){
   if(typeof license[0] !== 'undefined'){
-    return`
-    1. [License](#License)`    
+    return`1. [License](#License)`    
   }
   else return '';
 }
@@ -56,9 +55,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(typeof license[0] !== 'undefined'){
-    return `
-
-    ### License:${license}
+    return `## License:${license}
     The license for this project is the ${license} license.
     To read more about this license follow the link below.
     [${license} link](${renderLicenseLink(license)})
@@ -73,19 +70,22 @@ function generateMarkdown(data) {
   return `# ${data.projectName} ${renderLicenseBadge(data.license)}
   ## Description: 
   ${data.description}
-  ## Table of contents: 
+  ## Table of contents:
+  ${tableContentsLicense(data.license)} 
   1. [Installation](#Installation)
-  1. [Usage](#Usage-Instructions)${tableContentsLicense(data.license)}
+  1. [Usage](#Usage-Instructions)  
   1. [Contributing](#Contributing-Guidelines)
   1. [Testing](#Testing)
   1. [Questions](#Questions)
+
+  ${renderLicenseSection(data.license)}
 
   ## Installation:  
   ${data.installation}
 
   ## Usage Instructions:
-  ${data.usage}  
-  ${renderLicenseSection(data.license)}
+  ${data.usage}
+
   ## Contributing Guidelines:
   ${data.contributing}
 
