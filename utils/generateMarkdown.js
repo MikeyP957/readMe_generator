@@ -50,7 +50,8 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if(license != null){
     console.log(license[0]);
-    return `${license} ${renderLicenseBadge(license)}
+    return `${license}
+    ${renderLicenseBadge(license)}
     [${license} link](${renderLicenseLink(license)})`
       }
   else return '';
@@ -58,11 +59,9 @@ function renderLicenseSection(license) {
 
 // A function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(renderLicenseSection(data.license), "renderLicenseSction")
-  console.log(renderLicenseBadge(data.license), "rednerLicenseBadge")
-  console.log(renderLicenseLink(data.license), 'renderLicenseLink')
   return `# ${data.projectName} 
-  ## Description ${data.description}
+  ## Description: 
+  ${data.description}
   ## Table of contents: 
   1. [Installation](#Installation)
   1. [Usage](#Usage-Instructions)
@@ -87,7 +86,7 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Questions:
-  Contact me with any further questions via email:${data.email}
+  Contact me with any further questions via email: ${data.email}
   Or my github: ${data.github}`;
 }
 
