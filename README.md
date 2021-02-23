@@ -1,5 +1,5 @@
-# generate a readme 
-  ## Description it generates a readme
+# Readme_Generator 
+  ## Description The user is promted with various questions about their project. When completed the user is given a README in markdown with that includes their responses.
   ## Table of contents: 
   1. [Installation](#Installation)
   1. [Usage](#Usage-Instructions)
@@ -9,21 +9,21 @@
   1. [Questions](#Questions)
 
   ## Installation:  
-  none
+  This application is written with Node.js
 
   ## Usage Instructions:
-  eat
+  This can be used by anyone who wants to make writing a README automated.
 
-  ## License:Mozilla Public License 2.0
-  Mozilla Public License 2.0 undefined
-    [Mozilla Public License 2.0 link](undefined)
+  ## License:GNU General Public License v3.0
+  GNU General Public License v3.0 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+    [GNU General Public License v3.0 link](https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#gnu-gpl-v3)
 
   ## Contributing Guidelines:
-  sleep
+  Anyone is welcome to contribute to this project.
 
   ## Testing:
-  drink
+  No
 
   ## Questions:
-  Contact me with any further questions via email:mieprt
-  Or my github: mikeyo
+  Contact me with any further questions via email:peraram2@gmail.com
+  Or my github: MikeyP957
