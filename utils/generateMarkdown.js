@@ -55,13 +55,15 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(typeof license[0] !== 'undefined'){
-    return `## License:${license}
-    
-    The license for this project is the ${license} license.
-    To read more about this license follow the link below.
-    [${license} link](${renderLicenseLink(license)})
+    return (
+`## License: ${license}
 
-    `
+  The license for this project is the ${license}license.
+  To read more about this license follow the linkbelow.
+  [${license} link](${renderLicenseLink(license)})
+
+`
+    )  
     }
   else return '';
 }
